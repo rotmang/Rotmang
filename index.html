@@ -10,178 +10,185 @@
 body{background:#fff8f0;}
 
 header{
-  background:linear-gradient(90deg,#ff4d4d,#ffcc00);
-  color:white;
-  text-align:center;
-  padding:80px 20px;
+background:linear-gradient(90deg,#ff4d4d,#ffcc00);
+color:white;text-align:center;padding:80px 20px;
 }
 
 .logo{font-size:2rem;font-weight:bold;}
 .viral{
-  background:black;color:yellow;
-  padding:5px 12px;border-radius:20px;
-  display:inline-block;margin:10px 0;
-  animation:blink 1s infinite alternate;
+background:black;color:yellow;
+padding:5px 12px;border-radius:20px;
+display:inline-block;margin:10px 0;
 }
-
-@keyframes blink{from{opacity:1;}to{opacity:0.5;}}
 
 h1{font-size:2.5rem;}
 
 .btn{
-  margin-top:15px;padding:12px 25px;
-  border:none;border-radius:30px;
-  font-weight:bold;cursor:pointer;
-  background:white;color:#ff4d4d;
+margin-top:10px;padding:10px 20px;border:none;
+border-radius:30px;font-weight:bold;cursor:pointer;
+background:linear-gradient(135deg,#ff4d4d,#ff9900);
+color:white;
 }
 
 section{padding:60px 20px;text-align:center;}
 
-.products{
-  display:flex;flex-wrap:wrap;
-  justify-content:center;gap:25px;
-}
+.products{display:flex;flex-wrap:wrap;justify-content:center;gap:25px;}
 
 .card{
-  background:white;width:260px;
-  padding:20px;border-radius:20px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.1);
-  transition:0.3s;
-  position:relative;
+background:white;width:260px;padding:20px;
+border-radius:20px;box-shadow:0 10px 20px rgba(0,0,0,0.1);
+position:relative;
 }
-.card:hover{transform:translateY(-10px) scale(1.03);}
 
 .badge{
-  position:absolute;
-  top:12px;
-  left:12px;
-  color:white;
-  padding:6px 12px;
-  border-radius:20px;
-  font-size:11px;
-  font-weight:bold;
-  z-index:2;
+position:absolute;top:12px;left:12px;
+color:white;padding:6px 12px;border-radius:20px;
+font-size:11px;font-weight:bold;
 }
 
 .badge.best{background:#ff4d4d;}
 .badge.new{background:#00c853;}
 
 .card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-  border-radius:15px;
+width:100%;height:180px;object-fit:cover;border-radius:15px;
 }
 
 .price{color:#ff4d4d;font-weight:bold;margin-top:10px;}
 
-.qty{
-  display:flex;justify-content:center;
-  gap:10px;margin-top:10px;
-}
+.qty{display:flex;justify-content:center;gap:10px;margin-top:10px;}
 
 .qty button{
-  padding:5px 10px;border:none;
-  background:#ff4d4d;color:white;
-  border-radius:5px;
+padding:5px 10px;border:none;
+background:#ff4d4d;color:white;border-radius:5px;
 }
 
 .note{
-  margin-top:10px;padding:8px;width:100%;
-  border-radius:10px;border:1px solid #ddd;
-}
-
-/* STAMP */
-.progress{
-  width:100%;height:10px;
-  background:#eee;border-radius:10px;
-  margin-top:10px;
-}
-
-.progress-bar{
-  height:100%;width:0%;
-  background:linear-gradient(90deg,#ff4d4d,#ffcc00);
-  border-radius:10px;
-  transition:0.5s;
-}
-
-.stamp-text{
-  font-size:12px;margin-top:5px;
-  color:#ff4d4d;font-weight:bold;
+margin-top:10px;padding:8px;width:100%;
+border-radius:10px;border:1px solid #ddd;
 }
 
 .loyalty-info{
-  margin-top:30px;
-  background:#fff3cd;
-  border:2px dashed #ff4d4d;
-  padding:15px;border-radius:15px;
-  font-size:14px;font-weight:bold;
-  color:#ff4d4d;
+margin-top:30px;background:#fff3cd;
+border:2px dashed #ff4d4d;
+padding:15px;border-radius:15px;
+font-weight:bold;
 }
 
-.popup{
-  position:fixed;top:20px;left:50%;
-  transform:translateX(-50%);
-  background:#ff4d4d;color:white;
-  padding:10px 20px;border-radius:20px;
-  display:none;
+/* LEADERBOARD */
+.leaderboard-box{
+margin-top:50px;
+padding:25px;
+border-radius:20px;
+background:linear-gradient(135deg,#ffecd2,#fcb69f);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+width:fit-content;
+margin:auto;
 }
 
+#leaderboard{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
+margin-top:20px;
+}
+
+.leader-card{
+width:260px;
+padding:12px;
+border-radius:15px;
+display:flex;
+justify-content:space-between;
+color:white;
+font-weight:bold;
+animation:slideUp 0.5s ease, pop 0.3s ease;
+}
+
+.rank1{background:linear-gradient(90deg,#FFD700,#FFC107);}
+.rank2{background:linear-gradient(90deg,#C0C0C0,#9E9E9E);}
+.rank3{background:linear-gradient(90deg,#CD7F32,#A0522D);}
+.rankLain{background:#ff4d4d;}
+
+@keyframes slideUp{
+from{transform:translateY(30px);opacity:0;}
+to{transform:translateY(0);opacity:1;}
+}
+
+@keyframes pop{
+0%{transform:scale(0.8);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+/* NOTIF */
+#notif{
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+background:#ff4d4d;
+color:white;
+padding:12px 20px;
+border-radius:25px;
+font-weight:bold;
+display:none;
+z-index:999;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+#notif span{
+margin-left:10px;
+cursor:pointer;
+}
+
+/* WA */
 .wa{
-  position:fixed;bottom:20px;right:20px;
-  background:#25D366;color:white;
-  padding:15px;border-radius:50px;
-  text-decoration:none;font-weight:bold;
-}
-
-footer{
-  background:#ff4d4d;color:white;
-  padding:30px;text-align:center;
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:white;
+padding:15px;border-radius:50px;text-decoration:none;
 }
 </style>
 </head>
 
 <body>
 
-<div class="popup" id="popup">🔥 Orang baru aja beli Rotmang!</div>
-
 <header>
 <div class="logo">🍞 ROTMANG</div>
 <div class="viral">🔥 VIRAL BANGET</div>
 <h1>Cuma 5 Ribuan Udah Kenyang 😭🔥</h1>
-<p>Jajanan anak SMA paling hype sekarang!</p>
-<button class="btn" onclick="orderNow()">Pesan Sekarang</button>
 </header>
 
 <section>
 <h2>Menu Favorit 🔥</h2>
 
+<input id="namaUser" placeholder="Nama lu biar masuk leaderboard 😈"
+style="padding:8px;border-radius:10px;border:1px solid #ddd;margin:15px;">
+
 <div class="products">
 
-<!-- KLASIK -->
 <div class="card">
 <img src="img/rotmangklasik.jpeg">
 <h3>Rotmang Klasik</h3>
-<p>Sosis kecil + mayo</p>
 <div class="price">Rp 5.000</div>
-
 <div class="qty">
 <button onclick="changeQty(this,-1)">-</button>
 <span>1</span>
 <button onclick="changeQty(this,1)">+</button>
 </div>
-
 <input class="note" placeholder="Request">
 <button class="btn" onclick="orderProduct(this,'Rotmang Klasik')">Pesan</button>
 </div>
 
-<!-- MANTAP -->
 <div class="card">
 <div class="badge best">BEST SELLER ⭐</div>
 <img src="img/rotmangmantap.jpeg">
 <h3>Rotmang Mantap</h3>
-<p>Sosis premium + mayo 🔥</p>
 <div class="price">Rp 8.000</div>
+
+<div style="margin-top:10px;background:#eee;border-radius:20px;overflow:hidden;height:12px;">
+<div id="stampFill" style="height:100%;width:0%;background:linear-gradient(90deg,#ff4d4d,#ff9900);"></div>
+</div>
+<div id="stampText" style="font-size:12px;margin-top:5px;">Stempel: 0 / 7</div>
 
 <div class="qty">
 <button onclick="changeQty(this,-1)">-</button>
@@ -191,30 +198,18 @@ footer{
 
 <input class="note" placeholder="Request">
 <button class="btn" onclick="orderMantap(this)">Pesan</button>
-
-<div class="progress">
-<div class="progress-bar" id="bar"></div>
 </div>
 
-<div class="stamp-text" id="text">
-Kumpulin 7 stempel → GRATIS!
-</div>
-</div>
-
-<!-- SANDWITCH -->
 <div class="card">
 <div class="badge new">NEW 🔥</div>
 <img src="img/sandwitch.jpeg">
 <h3>Sandwitch Uhuy</h3>
-<p>Kornet + telur + keju + saus 😍</p>
 <div class="price">Rp 15.000</div>
-
 <div class="qty">
 <button onclick="changeQty(this,-1)">-</button>
 <span>1</span>
 <button onclick="changeQty(this,1)">+</button>
 </div>
-
 <input class="note" placeholder="Request">
 <button class="btn" onclick="orderProduct(this,'Sandwitch Uhuy')">Pesan</button>
 </div>
@@ -222,64 +217,170 @@ Kumpulin 7 stempel → GRATIS!
 </div>
 
 <div class="loyalty-info">
-🔥 Setiap pembelian Rotmang Mantap = 1 stempel <br>
-🎯 Kumpulkan 7 stempel → GRATIS 1 Rotmang Mantap
+🔥 7 stempel = GRATIS 1 Rotmang Mantap
+</div>
+
+<div class="leaderboard-box">
+<h2>🏆 Si Paling Boros 😈🔥</h2>
+<div id="leaderboard"></div>
 </div>
 
 </section>
 
-<footer>
-<p>Order sekarang: 08985701470</p>
-</footer>
+<div id="notif"></div>
 
-<a class="wa" href="https://wa.me/628985701470">Chat WA</a>
+<a class="wa" href="https://wa.me/628985701470">💬</a>
 
 <script>
-let stamps=0;
 
-function updateUI(){
-let percent=(stamps/7)*100;
-document.getElementById("bar").style.width=percent+"%";
+/* AUTO RESET (CUMA SEKALI) */
+if(!localStorage.getItem("resetDone")){
+localStorage.removeItem("leaderboard");
+localStorage.setItem("resetDone","true");
 }
 
-function showPopup(){
-let p=document.getElementById("popup");
-p.style.display="block";
-setTimeout(()=>p.style.display="none",2000);
-}
-setInterval(showPopup,5000);
+let stamps=parseInt(localStorage.getItem("stamps"))||0;
+let dataUser=JSON.parse(localStorage.getItem("leaderboard"))||[];
+let notifLock=false;
 
-function orderNow(){
-window.open("https://wa.me/628985701470?text=Halo mau order Rotmang dong");
+/* STAMPEL */
+function updateStampUI(){
+document.getElementById("stampFill").style.width=(stamps/7*100)+"%";
+document.getElementById("stampText").innerText=`Stempel: ${stamps} / 7`;
+}
+updateStampUI();
+
+/* NOTIF */
+function showNotif(text,isPriority=false){
+let notif=document.getElementById("notif");
+
+if(notifLock && !isPriority) return;
+
+notif.innerHTML="🔥 "+text+" <span onclick='closeNotif()'>✖</span>";
+notif.style.display="block";
+
+if(isPriority){notifLock=true;}
+
+localStorage.setItem("lastNotif",text);
 }
 
+function closeNotif(){
+document.getElementById("notif").style.display="none";
+notifLock=false;
+localStorage.removeItem("lastNotif");
+}
+
+window.onload=function(){
+let last=localStorage.getItem("lastNotif");
+if(last){showNotif(last,true);}
+updateLeaderboard();
+};
+
+/* LEADERBOARD */
+function updateLeaderboard(){
+let list=document.getElementById("leaderboard");
+list.innerHTML="";
+dataUser.sort((a,b)=>b.total-a.total);
+
+dataUser.slice(0,5).forEach((u,i)=>{
+setTimeout(()=>{
+let div=document.createElement("div");
+
+let rankClass="rankLain";
+let icon="😈";
+
+if(i===0){rankClass="rank1";icon="🥇";}
+else if(i===1){rankClass="rank2";icon="🥈";}
+else if(i===2){rankClass="rank3";icon="🥉";}
+
+div.className="leader-card "+rankClass;
+div.innerHTML=`<span>${icon} ${u.nama}</span>
+<span>Rp ${u.total.toLocaleString('id-ID')}</span>`;
+
+list.appendChild(div);
+},i*150);
+});
+
+localStorage.setItem("leaderboard",JSON.stringify(dataUser));
+}
+
+function addUserTotal(total){
+let nama=document.getElementById("namaUser").value||"Anonim";
+let found=dataUser.find(u=>u.nama===nama);
+
+if(found){found.total+=total;}
+else{dataUser.push({nama:nama,total:total});}
+
+let rank=dataUser.sort((a,b)=>b.total-a.total)
+.findIndex(u=>u.nama===nama)+1;
+
+if(rank===1){showNotif("🥇 "+nama+" jadi SULTAN ROTMANG!");}
+else if(rank===2){showNotif("🥈 "+nama+" hampir jadi sultan 😈");}
+else if(rank===3){showNotif("🥉 "+nama+" masuk TOP 3 🔥");}
+else{showNotif("🔥 "+nama+" masuk leaderboard!");}
+
+updateLeaderboard();
+}
+
+/* ORDER */
 function changeQty(btn,change){
 let span=btn.parentElement.querySelector("span");
 let qty=parseInt(span.innerText);
-qty+=change;
-if(qty<1)qty=1;
+qty+=change;if(qty<1)qty=1;
 span.innerText=qty;
+}
+
+function formatWA(namaProduk,qty,total,note){
+return `Halo kak 👋
+Mau order *${namaProduk}* 😍🔥
+
+Jumlah: ${qty} pcs
+Total: Rp ${total.toLocaleString('id-ID')}
+Catatan: ${note || '-'}
+
+Best seller nih 🤤🔥
+Bisa dibuatin kak?`;
 }
 
 function orderProduct(btn,name){
 let card=btn.parentElement;
-let qty=card.querySelector(".qty span").innerText;
+let qty=parseInt(card.querySelector(".qty span").innerText);
+let note=card.querySelector(".note").value;
 
-let msg=`Halo mau order ${name} ${qty} pcs dong`;
+let harga=name==="Sandwitch Uhuy"?15000:5000;
+let total=qty*harga;
+
+addUserTotal(total);
+
+let msg=formatWA(name,qty,total,note);
 window.open("https://wa.me/628985701470?text="+encodeURIComponent(msg));
 }
 
 function orderMantap(btn){
 let card=btn.parentElement;
 let qty=parseInt(card.querySelector(".qty span").innerText);
+let note=card.querySelector(".note").value;
+
+let total=qty*8000;
 
 stamps+=qty;
-if(stamps>=7){alert("Gratis 1 Rotmang Mantap!");stamps=0;}
 
-updateUI();
+/* GRATIS PRIORITAS */
+if(stamps>=7){
+showNotif("🎉 SELAMAT! KAMU DAPET ROTMANG MANTAP GRATIS! 😍🔥",true);
+stamps-=7;
+}
 
-let msg=`Halo mau order Rotmang Mantap ${qty} pcs dong`;
+localStorage.setItem("stamps",stamps);
+updateStampUI();
+
+addUserTotal(total);
+
+let msg=formatWA("Rotmang Mantap",qty,total,note);
+
+setTimeout(()=>{
 window.open("https://wa.me/628985701470?text="+encodeURIComponent(msg));
+},1500);
 }
 </script>
 
